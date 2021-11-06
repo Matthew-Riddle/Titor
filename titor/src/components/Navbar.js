@@ -1,16 +1,30 @@
-import React, {useState} from 'react'
+import React, {Component, useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/titorlogo.png'
 import './Navbar.css'
-function Navbar() {
-    const [click, setClick] = useState(false)
+import store from '../app/store'
 
-    const handleClick = () => setClick(!click)
-    const handlePostClick = () => {
 
+class Navbar extends Component {
+
+    constructor(props) {
+        super(props)
+        this.unsubscribe = store.subscribe(() => {
+        })
+        this.handlePostClick = this.handlePostClick.bind(this)
     }
-    const closeMobileMenu = () => setClick(false)
-    return (
+    
+    handlePostClick() {
+        console.log("initial state: ", store.getState())
+        //store.dispatch({ type: "titor/postbutton", payload: "true" })
+    }
+    
+    componentWillUnmount() {
+        this.unsubscribe()
+    }
+    
+    render() {
+        return (
         <>
             <nav className="flex justify-center bg-blue-light rounded-md w-3/12">
                 <div className="navbar-container">
@@ -20,14 +34,16 @@ function Navbar() {
                     {/* <div className="menu-icon flex" onClick={handleClick}>
                         <i className={click ? "lni lni-exit" : "lni lni-menu"}></i>
                     </div> */}
-
-                    <div className="button bg-green" onClick={handlePostClick}>
-                        <p className="text-yellow">Post</p>
+                     
+                    <div className="button bg-green" onClick={this.handlePostClick}>
+                        <p className="text-yellow"><button form="textbox" type="submit">Post</button></p>
                     </div>
+                    
                 </div>
             </nav>
         </>
-    )
+        )
+    }
 }
 
 export default Navbar

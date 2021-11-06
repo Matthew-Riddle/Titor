@@ -1,5 +1,5 @@
-import React from 'react'
-import MainContainer from './components/MainContainer'
+import React, { createContext } from 'react'
+import MainContainer from '../components/MainContainer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 

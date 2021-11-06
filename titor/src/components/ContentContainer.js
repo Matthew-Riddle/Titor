@@ -1,25 +1,23 @@
-import React, {useState} from 'react'
+import React, { Component, useState} from 'react'
 import { Link } from 'react-router-dom'
 import Post from './postcomponents/Post'
 import './ContentContainer.css'
 import NewPost from './postcomponents/NewPost'
-function ContentContainer() {
-    const [click, setClick] = useState(false)
+import { connect } from 'react-redux'
+import PostList from './postcomponents/PostList'
 
-    const handleClick = () => setClick(!click)
-    const closeMobileMenu = () => setClick(false)
-    return (
-        <>
-            <div className="content-container bg-blue w-2/4 rounded-md">
-                <div className="alignment-container">
-                    <NewPost></NewPost>
-                    <Post></Post>
-                    <Post></Post>
-                    <Post></Post>
+function ContentContainer({props) {
+        return (
+            <>
+            
+                <div className="content-container bg-blue w-2/4 rounded-md">
+                    <div className="alignment-container">
+                        <NewPost></NewPost>
+                        <PostList></PostList>
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+           
+            </>
+        )
 }
-
 export default ContentContainer
