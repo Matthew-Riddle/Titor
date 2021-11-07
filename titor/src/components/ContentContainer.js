@@ -6,7 +6,7 @@ import NewPost from './postcomponents/NewPost'
 import { connect } from 'react-redux'
 import PostList from './postcomponents/PostList'
 
-function ContentContainer({props) {
+function ContentContainer(props) {
         return (
             <>
             

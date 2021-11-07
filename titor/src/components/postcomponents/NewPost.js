@@ -11,12 +11,6 @@ class NewPost extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleOnChange = this.handleOnChange.bind(this)
-        this.unsubscribe = store.subscribe(() => {})
-    }
-    
-
-    componentWillUnmount() {
-        this.unsubscribe()
     }
 
     handleSubmit(event) {
@@ -24,7 +18,6 @@ class NewPost extends Component {
         this.setState({
             value: ""
         })
-        console.log(store.getState())
         event.preventDefault()
     }
     handleOnChange(event) {

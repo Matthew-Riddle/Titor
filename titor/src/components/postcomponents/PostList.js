@@ -1,13 +1,14 @@
 import React, {useState} from "react";
-import './PostList.css'
-
+import { connect } from "react-redux";
+import Post from "./Post";
 const mapStateToProps = (state) => {
-    state.posts.map((item) => {
+    var postArray = state.posts.map((item) => {
         return {
             id: item.id,
             value: item.value
         }
     })
+    return {postArray}
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -16,16 +17,19 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-function PostList({ posts }) {
+function PostList(post) {
+    post = post.postArray
+    function something() {
+        return post.map(element => {
+            return (<Post key={element.id} value={element.value}></Post>)
+        });
+    }
     return (
         <>
-            <div className="post-container border-2">
-                <p className="overflow-ellipsis overflow-hidden ... text-yellow">
-                    {props.content}
-                </p>
+            <div className="post-container">
+                {something()} 
             </div>
         </>
     )
 }
-connect(mapStateToProps)(ContentContainer)
-export default PostList
+export default connect(mapStateToProps)(PostList)

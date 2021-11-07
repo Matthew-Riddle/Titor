@@ -9,18 +9,11 @@ class Navbar extends Component {
 
     constructor(props) {
         super(props)
-        this.unsubscribe = store.subscribe(() => {
-        })
         this.handlePostClick = this.handlePostClick.bind(this)
     }
     
     handlePostClick() {
-        console.log("initial state: ", store.getState())
-        //store.dispatch({ type: "titor/postbutton", payload: "true" })
-    }
-    
-    componentWillUnmount() {
-        this.unsubscribe()
+        //console.log("initial state: ", store.getState())
     }
     
     render() {
@@ -35,9 +28,9 @@ class Navbar extends Component {
                         <i className={click ? "lni lni-exit" : "lni lni-menu"}></i>
                     </div> */}
                      
-                    <div className="button bg-green" onClick={this.handlePostClick}>
-                        <p className="text-yellow"><button form="textbox" type="submit">Post</button></p>
-                    </div>
+                    <button className="button bg-green" form="textbox" type="submit" onClick={this.handlePostClick}>
+                        <p className="text-yellow">Post</p>
+                    </button>
                     
                 </div>
             </nav>

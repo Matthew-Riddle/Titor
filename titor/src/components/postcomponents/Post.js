@@ -11,7 +11,7 @@ function Post(props) {
         <>
             <div className="post-container border-2">
                 <p className="overflow-ellipsis overflow-hidden ... text-yellow">
-                    {props.content}
+                    {props.value}
                 </p>
             </div>
         </>
