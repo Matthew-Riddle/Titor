@@ -19,7 +19,7 @@ class Navbar extends Component {
     render() {
         return (
         <>
-            <nav className="flex justify-center bg-blue-light rounded-md w-3/12">
+            <nav className="flex justify-center bg-blue-light w-3/12">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo">
                         <img src={logo}></img>
