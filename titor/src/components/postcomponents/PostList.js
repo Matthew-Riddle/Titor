@@ -19,15 +19,15 @@ const mapDispatchToProps = (dispatch) => {
 
 function PostList(post) {
     post = post.postArray
-    function something() {
+    function createPostList() {
         return post.map(element => {
             return (<Post key={element.id} value={element.value}></Post>)
-        });
+        }).reverse();
     }
     return (
         <>
-            <div className="post-container">
-                {something()} 
+            <div className="post-container-overall">
+                {createPostList()}
             </div>
         </>
     )

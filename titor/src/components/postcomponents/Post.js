@@ -9,11 +9,9 @@ function Post(props) {
     }
     return (
         <>
-            <div className="post-container border-2">
-                <p className="overflow-ellipsis overflow-hidden ... text-yellow">
-                    {props.value}
-                </p>
-            </div>
+            <p className="post-container overflow-ellipsis overflow-scroll break-all ... text-yellow">
+                {props.value}
+            </p>
         </>
     )
 }
