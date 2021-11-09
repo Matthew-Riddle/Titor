@@ -1,6 +1,7 @@
 import React, {Component, useState} from "react";
 import './Post.css'
-import store from "../../app/store";
+import { connect } from 'react-redux'
+import BasicForm from '../atomiccomponents/BasicForm'
 
 class NewPost extends Component {
 
@@ -12,13 +13,19 @@ class NewPost extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleOnChange = this.handleOnChange.bind(this)
         this.handleKeyStroke = this.handleKeyStroke.bind(this)
+        this.mapDispatchToProps = this.mapDispatchToProps.bind(this)
+    }
+
+    mapDispatchToProps(dispatch) {
+
     }
 
     handleSubmit(event) {
         this.setState({
             value: ""
         })
-        store.dispatch({ type: "titor/post", payload: this.state.value })
+        console.log("ashdfoas;dfjaskfjasdjf")
+        this.props.dispatch({ type: "titor/post", payload: this.state.value })
         event.preventDefault()
     }
 
@@ -27,7 +34,8 @@ class NewPost extends Component {
             this.setState({
                 value: ""
             })
-            store.dispatch({ type: "titor/post", payload: this.state.value })
+            
+            this.props.dispatch({ type: "titor/post", payload: this.state.value })
             event.preventDefault()
         }
     }
@@ -41,13 +49,14 @@ class NewPost extends Component {
     render() {
         return(
             // <div className="new-post">
-                <form id="textbox" className="new-post" onSubmit={this.handleSubmit} onKeyUp={this.handleKeyStroke}>
-                    <textarea className="text-box" name="newPost" placeholder="tell us something..." value={this.state.value} onChange={this.handleOnChange}></textarea>
-                </form>
+                // <form id="textbox" className="new-post" onSubmit={this.handleSubmit} onKeyUp={this.handleKeyStroke} isUpdate={false} text={this.state.value}>
+                //     <textarea className="text-box" placeholder="tell us something..." value={this.state.value} onChange={this.handleOnChange}></textarea>
+                // </form>
             // </div>
-        
+            <BasicForm id="textbox" onSubmit={this.handleSubmit} onKeyUp={this.handleKeyStroke} 
+            onChange={this.handleOnChange} text={this.state.value}></BasicForm>
         )
     }
 }
 
-export default NewPost
+export default connect()(NewPost)

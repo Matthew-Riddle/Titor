@@ -1,0 +1,34 @@
+.button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: .4s;
+}
+
+.button:hover {
+    background-color: #64c224;
+}
+
+.button:active {
+    background-color: #488d1a;
+    transition: 0s;
+}
+/* this shit above belongs to buttons... move it */
+.new-post {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+}
+
+.text-box {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 5%;
+    background-color: black;
+    color: #e1d483;
+}

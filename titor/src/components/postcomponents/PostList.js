@@ -11,17 +11,11 @@ const mapStateToProps = (state) => {
     return {postArray}
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-
-    }
-}
-
 function PostList(post) {
     post = post.postArray
     function createPostList() {
         return post.map(element => {
-            return (<Post key={element.id} value={element.value}></Post>)
+            return (<Post key={element.id} id={element.id} value={element.value}></Post>)
         }).reverse();
     }
     return (

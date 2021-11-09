@@ -2,7 +2,6 @@ import React, {Component, useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/titorlogo.png'
 import './Navbar.css'
-import store from '../app/store'
 
 
 class Navbar extends Component {
