@@ -30,7 +30,6 @@ export default function rootReducer(state = initialState, action) {
                     ...state.posts.map((element) =>  { 
                         if(element.id === action.payload.id) {
                             element.value = action.payload.value
-                            //return element
                         }
                         return element
                     })
