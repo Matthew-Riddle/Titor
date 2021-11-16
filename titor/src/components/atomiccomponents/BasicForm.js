@@ -1,6 +1,6 @@
 import "./Basic.css"
 
-const BasicButton = (props) => {
+const BasicForm = (props) => {
     return (
         <form className="new-post" id={props.id} onSubmit={props.onSubmit} onKeyUp={props.onKeyUp}>
             <textarea className="text-box" placeholder="tell us something..." value={props.text} onChange={props.onChange}></textarea>
@@ -8,4 +8,4 @@ const BasicButton = (props) => {
     )
 }
 
-export default BasicButton
+export default BasicForm

@@ -24,7 +24,6 @@ class NewPost extends Component {
         this.setState({
             value: ""
         })
-        console.log("ashdfoas;dfjaskfjasdjf")
         this.props.dispatch({ type: "titor/post", payload: this.state.value })
         event.preventDefault()
     }

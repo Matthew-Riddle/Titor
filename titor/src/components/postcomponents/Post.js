@@ -2,7 +2,17 @@ import React, {Component, useState} from "react"
 import { connect } from "react-redux"
 import './Post.css'
 import BasicForm from '../atomiccomponents/BasicForm'
-import store from '../../app/store'
+import BasicButton from "../atomiccomponents/BasicButton"
+
+const mapStateToProps = (state) => {
+    var postArray = state.posts.map((item) => {
+        return {
+            id: item.id,
+            value: item.value
+        }
+    })
+    return {postArray}
+}
 class Post extends Component{
 
     constructor(props) {
@@ -14,7 +24,6 @@ class Post extends Component{
         this.handleOnChange = this.handleOnChange.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
         this.handleUpdate = this.handleUpdate.bind(this)
-        this.mapDispatchToProps = this.mapDispatchToProps.bind(this)
 
     }
 
@@ -33,14 +42,8 @@ class Post extends Component{
         this.props.dispatch({ type: "titor/delete", payload: props.id })
     }
 
-    mapDispatchToProps = (state) => {
-        var postArray = state.posts.map((item) => {
-            return {
-                id: item.id,
-                value: item.value
-            }
-        })
-        return {postArray}
+    composedHandleDelete(props) {
+        this.props.dispatch({ type: "titor/delete", payload: props.id })
     }
 
     handleOnChange(event) {
@@ -61,16 +64,11 @@ class Post extends Component{
                             </p>
                         } 
                     </div>
-                    <button className="button bg-green" onClick={()=>this.handleDelete(this.props)}>
-                        <p className="text-yellow">Delete</p>
-                    </button>
-                    <button className="button bg-green" onClick={()=>this.handleUpdate(this.props)}>
-                        <p className="text-yellow">Update</p>
-                    </button>
-                    
+                    <BasicButton text="Delete" onClick={()=>this.handleDelete(this.props)}></BasicButton>
+                    <BasicButton text="Update" onClick={()=>this.handleUpdate(this.props)}></BasicButton>
             </>
         )
     }
 }
 
-export default connect()(Post)
+export default connect(mapStateToProps)(Post)

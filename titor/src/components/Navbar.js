@@ -2,6 +2,7 @@ import React, {Component, useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/titorlogo.png'
 import './Navbar.css'
+import BasicButton from './atomiccomponents/BasicButton'
 
 
 class Navbar extends Component {
@@ -27,10 +28,10 @@ class Navbar extends Component {
                         <i className={click ? "lni lni-exit" : "lni lni-menu"}></i>
                     </div> */}
                      
-                    <button className="button bg-green" form="textbox" type="submit" onClick={this.handlePostClick}>
+                    {/* <button className="button bg-green" form="textbox" type="submit" onClick={this.handlePostClick}>
                         <p className="text-yellow">Post</p>
-                    </button>
-                    
+                    </button> */}
+                    <BasicButton form="textbox" onClick={this.handlePostClick} text="Post"></BasicButton>
                 </div>
             </nav>
         </>
