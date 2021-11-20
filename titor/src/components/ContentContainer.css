@@ -1,5 +1,14 @@
 .content-container {
+    border-right: 2px solid rgb(134, 134, 134);
+}
 
+.wrangler-container {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.main-container {
+    background: black;
 }
 
 .alignment-container {
@@ -10,4 +19,11 @@
     width: 100%;
     
     /* left: 25%; */
+}
+
+.button-container {
+}
+
+.blend-container {
+    background: black;
 }

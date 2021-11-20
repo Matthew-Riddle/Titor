@@ -1,3 +1,4 @@
+/* Basic Button Styling */
 .button {
     border: none;
     padding: 15px 32px;
@@ -16,7 +17,7 @@
     background-color: #488d1a;
     transition: 0s;
 }
-/* this shit above belongs to buttons... move it */
+/*-----------------------------*/
 .new-post {
     width: 100%;
     height: 100%;

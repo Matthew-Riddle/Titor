@@ -12,7 +12,7 @@ p {
     min-height: 100px;
     height: 100%;
     gap: 2%;
-    border-color: white;
+    border-color: rgb(102, 102, 102);
     border-top-width: 2px;
     padding: 5%;
 }

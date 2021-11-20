@@ -24,14 +24,6 @@ class Navbar extends Component {
                     <Link to="/" className="navbar-logo">
                         <img src={logo}></img>
                     </Link>
-                    {/* <div className="menu-icon flex" onClick={handleClick}>
-                        <i className={click ? "lni lni-exit" : "lni lni-menu"}></i>
-                    </div> */}
-                     
-                    {/* <button className="button bg-green" form="textbox" type="submit" onClick={this.handlePostClick}>
-                        <p className="text-yellow">Post</p>
-                    </button> */}
-                    <BasicButton form="textbox" onClick={this.handlePostClick} text="Post"></BasicButton>
                 </div>
             </nav>
         </>

@@ -11,9 +11,11 @@ class MainContainer extends Component {
     render() {
         return (
             <>
-                <div className="flex justify-center relative min-h-screen bg-grey">
-                    <Navbar />
-                    <ContentContainer />
+                <div className="flex justify-center relative min-h-screen main-container">
+                    <div className="flex wrangler-container">
+                        <Navbar />
+                        <ContentContainer />
+                    </div>
                 </div>
             </>
         )
