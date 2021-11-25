@@ -1,7 +1,5 @@
 import React, {Component, useState} from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
-import ContentContainer from './ContentContainer'
 class MainContainer extends Component {
 
     constructor(props) {
@@ -13,8 +11,7 @@ class MainContainer extends Component {
             <>
                 <div className="flex justify-center relative min-h-screen main-container">
                     <div className="flex wrangler-container">
-                        <Navbar />
-                        <ContentContainer />
+                        {this.props.children}
                     </div>
                 </div>
             </>
