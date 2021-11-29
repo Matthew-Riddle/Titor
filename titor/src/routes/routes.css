@@ -1,10 +1,65 @@
+.login-wrangler {
+    display: grid;
+    grid-column: 1;
+}
 .login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
+    /* justify-content: center; */
+    left: 40%;
     width: 100%;
+    position: absolute;
+    /* background: url("../images/titorlogo.png") center top no-repeat; */
 }
 
-.button {
+.logo {
+    display: flex;
+    align-self: center;
+    /* padding: 1000px; */
+    /* margin-right: 0px; */
+    /* position: absolute; */
+    width: 2000px;
+    height: 2000px;
+    border-radius: 48.5%;
+    box-shadow:
+        inset 0 0 50px rgb(255, 238, 0),      /* inner white */
+        inset 20px 0 80px rgb(255, 136, 0),   /* inner left magenta short */
+        inset -20px 0 80px rgb(140, 0, 255),  /* inner right cyan short */
+        inset 20px 0 300px #f0f,  /* inner left magenta broad */
+        inset -20px 0 300px rgb(255, 0, 128), /* inner right cyan broad */
+        0 0 50px rgb(255, 238, 0),            /* outer white */
+        -10px 0 80px rgb(255, 136, 0),        /* outer left magenta */
+        10px 0 80px rgb(140, 0, 255);         /* outer right cyan */
+    animation: rotate 4s infinite linear normal;
+    /* animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0.5);
+    animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+}
+
+.logo-container {
+    display: flex;
+    align-self: center;
+    /* margin-left: 5%; */
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    animation: scale 1s infinite ease alternate;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes scale {
+    from { transform: scale(100%); }
+    to { transform: scale(90%); }
+}
+
+.login-button {
     background-color: rgb(255, 8, 0);
+}
+
+.login-label {
+    font-size: 14pt;
 }

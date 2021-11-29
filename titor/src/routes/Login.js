@@ -5,8 +5,16 @@ const Login = () => {
     return (
         <>
             <MainContainer>
-                <div className="login">
-                    <button class="button">Login</button>
+                <div className="logo-container">
+                    <img className="logo"/>
+                </div>
+                <div className="login-wrangler">
+                    <form className="login">
+                        <label className="login-label text-yellow" htmlFor="fname"><p>Username    </p></label>
+                        <input className="login-field" type="text" id="fname"></input>
+                        <label className="login-label text-yellow" htmlFor="fpass"><p>Password    </p></label>
+                        <input className="login-field" type="text" id="fpass"></input>
+                    </form>
                 </div>
             </MainContainer>
         </>
