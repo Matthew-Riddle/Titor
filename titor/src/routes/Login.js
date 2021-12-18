@@ -1,12 +1,12 @@
 import MainContainer from "../components/MainContainer"
 import ContentContainer from "../components/ContentContainer"
-import "./routes.css"
+import "./Login.css"
 const Login = () => {
     return (
         <>
             <MainContainer>
                 <div className="logo-container">
-                    <img className="logo"/>
+                    <div className="logo"/>
                 </div>
                 <div className="login-wrangler">
                     <form className="login">

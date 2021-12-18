@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { connect } from "react-redux";
 import Post from "./Post";
+const axios = require("axios");
 const mapStateToProps = (state) => {
     var postArray = state.posts.map((item) => {
         return {
@@ -11,11 +12,11 @@ const mapStateToProps = (state) => {
     return {postArray}
 }
 
-function PostList(post) {
+async function PostList(post) {
     post = post.postArray
     function createPostList() {
         return post.map(element => {
-            return (<Post key={element.id} id={element.id} value={element.value}></Post>)
+            return (<Post key={element.id} id={element.id} value={element.content}></Post>)
         }).reverse();
     }
     return (

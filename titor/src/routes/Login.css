@@ -14,37 +14,34 @@
 .logo {
     display: flex;
     align-self: center;
-    /* padding: 1000px; */
-    /* margin-right: 0px; */
-    /* position: absolute; */
     width: 2000px;
     height: 2000px;
-    border-radius: 48.5%;
+    border-radius: 50%;
     box-shadow:
         inset 0 0 50px rgb(255, 238, 0),      /* inner white */
         inset 20px 0 80px rgb(255, 136, 0),   /* inner left magenta short */
         inset -20px 0 80px rgb(140, 0, 255),  /* inner right cyan short */
-        inset 20px 0 300px #f0f,  /* inner left magenta broad */
-        inset -20px 0 300px rgb(255, 0, 128), /* inner right cyan broad */
+        inset 400px 0 300px #f0f,  /* inner left magenta broad */
+        inset -200px 0 300px rgb(255, 0, 128), /* inner right cyan broad */
         0 0 50px rgb(255, 238, 0),            /* outer white */
         -10px 0 80px rgb(255, 136, 0),        /* outer left magenta */
         10px 0 80px rgb(140, 0, 255);         /* outer right cyan */
-    animation: rotate 4s infinite linear normal;
-    /* animation-duration: 4s;
-    animation-timing-function: cubic-bezier(0, 0, 0, 0.5);
-    animation-iteration-count: infinite; */
-    /* animation-direction: alternate; */
+    animation: rotate 15s infinite linear normal;
 }
 
 .logo-container {
     display: flex;
     align-self: center;
-    /* margin-left: 5%; */
     position: absolute;
     width: 2000px;
     height: 2000px;
-    animation: scale 1s infinite ease alternate;
+    animation: scale 4s  infinite alternate;
 }
+
+/* .logo-no-resize-container {
+    display: flex;
+    overflow: hidden;
+} */
 
 @keyframes rotate {
     from { transform: rotate(0deg); }

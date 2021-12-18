@@ -9,6 +9,7 @@
 
 .main-container {
     background: black;
+    overflow: hidden;
 }
 
 .alignment-container {
