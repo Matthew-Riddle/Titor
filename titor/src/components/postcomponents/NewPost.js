@@ -13,11 +13,6 @@ class NewPost extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleOnChange = this.handleOnChange.bind(this)
         this.handleKeyStroke = this.handleKeyStroke.bind(this)
-        this.mapDispatchToProps = this.mapDispatchToProps.bind(this)
-    }
-
-    mapDispatchToProps(dispatch) {
-
     }
 
     handleSubmit(event) {
